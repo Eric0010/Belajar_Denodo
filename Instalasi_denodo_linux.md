@@ -48,7 +48,7 @@ Kalau semuanya lancar, saya akan punya folder seperti:
 
 ![image](https://github.com/user-attachments/assets/65c8a6ec-897b-4612-ad0d-87234fc4b138)
 
-Lalu pergilah ke denodo-platform/bin dan saya akan menjalankan command:
+Lalu pergilah ke denodo-platform/bin dan saya akan menjalankan command untuk menjalankan seervice denodo:
 
 ```
 ./vqlserver_shutdown.sh && ./vqlserver_startup.sh
