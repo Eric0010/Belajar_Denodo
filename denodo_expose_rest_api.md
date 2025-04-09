@@ -21,13 +21,10 @@ Membuat endpoint REST API dari Virtual View di Denodo agar bisa diakses dari apl
 - Pilih View, misalnya: `transaksi_u_transaksi_2024`
 - Klik `Publish → REST Web Service`
 
-### 2.3 Isi Informasi Endpoint
-- Name: `api_transaksi`
-- Klik `Create`
-- Endpoint otomatis tersedia di URL berikut:
-  ```
-  http://<host>:9090/server/<vdb_name>/<view_name>/
-  ```
+### 2.3 Carilah REST Web Service
+- Di dalam sideview menu, terdapat REST Web Service (transaksi_u_transaksi_2024)
+- Klik `3 dot → Launch Web Service URL`, lalu akan muncul URL seperti berikut:
+  
   Contoh:
   ```
   http://10.100.13.205:9090/server/admin/transaksi_u_transaksi_2024/
