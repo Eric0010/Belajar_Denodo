@@ -1,7 +1,6 @@
+# Denodo Quickstart Guide
 
-# 🚀 Denodo Quickstart Guide
-
-## 🎯 Tujuan
+## Tujuan
 Panduan ini membantu pengguna baru Denodo untuk:
 1. Menghubungkan berbagai sumber data (MySQL, Excel/CSV, dsb)
 2. Membuat **Base View**
@@ -9,11 +8,11 @@ Panduan ini membantu pengguna baru Denodo untuk:
 
 ---
 
-## ✅ 1. Connect ke Data Source
+## 1. Connect ke Data Source
 
 ### A. MySQL
 
-#### 🔧 Persiapan
+#### Persiapan
 - Install & jalankan MySQL (local atau remote)
 - Siapkan:
   - Hostname/IP
@@ -21,13 +20,13 @@ Panduan ini membantu pengguna baru Denodo untuk:
   - Username & password
   - Nama database
 - Download JDBC driver MySQL:  
-  👉 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
+  [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
 > File yang dibutuhkan: `mysql-connector-j-8.x.x.jar`
 
 ---
 
-### 📦 Upload MySQL JDBC Driver ke Denodo
+### Upload MySQL JDBC Driver ke Denodo
 
 1. Buka **Design Studio**
 2. Klik menu atas: `File → Extension Management`
@@ -37,11 +36,11 @@ Panduan ini membantu pengguna baru Denodo untuk:
    `mysql-connector-j-8.3.0.jar`
 6. Klik `Apply Changes`
 
-> ⚠️ Jika tidak langsung terdeteksi, restart VDP Server via Denodo Platform Control Center.
+> Jika tidak langsung terdeteksi, restart VDP Server via Denodo Platform Control Center.
 
 ---
 
-### 🔗 Buat Data Source: MySQL
+### Buat Data Source: MySQL
 
 1. Klik `New → Data Source → JDBC`
 2. Pilih adapter: `mysql-8`
@@ -65,22 +64,22 @@ Panduan ini membantu pengguna baru Denodo untuk:
 
 ---
 
-## ✅ 2. Buat Base View
+## 2. Buat Base View
 
-### 📥 Dari Tabel atau File
+### Dari Tabel atau File
 1. Setelah Data Source sukses, klik kanan → **Create Base View**
 2. Pilih:
    - Tabel dari database
    - Sheet/tab dari Excel
 3. Klik **Create**
 
-### 🔍 Preview Data
+### Preview Data
 - Klik 2x nama View → tab **Execution Panel**
 - Klik `Execute` untuk lihat data
 
 ---
 
-## 💡 Tips Tambahan:
+## Tips Tambahan:
 - Gunakan `Create Base View from Query` jika ingin ambil data via SQL
 - Semua data bersifat virtual — Denodo tidak menyimpan data
 - Kamu bisa gabungkan (join), filter, dan expose sebagai REST API
