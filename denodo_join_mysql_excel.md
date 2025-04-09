@@ -14,10 +14,66 @@ Membuat join view di Denodo yang menggabungkan data dari dua sumber berbeda:
 ## Langkah-langkah
 
 ### 1. Siapkan Base View
-- Base View dari MySQL: misalnya `customers`
-- Base View dari Excel: misalnya `pelanggan_status`
 
-Kedua view ini harus memiliki kolom join yang sama, misalnya `customer_id`.
+### A. Buat dan Isi Tabel MySQL
+
+#### 1.1 Buat Tabel `customers`
+Gunakan perintah SQL berikut di MySQL:
+
+```sql
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    city VARCHAR(50)
+);
+```
+
+#### 1.2 Masukkan Data ke Tabel `customers`
+
+```sql
+INSERT INTO customers (customer_id, name, email, city) VALUES
+(1, 'Andi', 'andi@mail.com', 'Jakarta'),
+(2, 'Budi', 'budi@mail.com', 'Bandung'),
+(3, 'Citra', 'citra@mail.com', 'Surabaya');
+```
+
+---
+
+### B. Upload dan Import File Excel ke Denodo
+
+#### 1.3 Buat File Excel
+Buat file bernama `pelanggan_status.xlsx` dengan isi sebagai berikut:
+
+| customer_id | status   | segment    |
+|-------------|----------|------------|
+| 1           | Active   | Premium    |
+| 2           | Inactive | Basic      |
+| 3           | Active   | Enterprise |
+
+#### 1.4 Upload Excel ke Denodo
+
+1. Masuk ke Denodo Design Studio
+2. Klik `New → Data Source → Excel`
+3. Beri nama (misalnya: `excel_status`)
+4. Klik `Browse` dan upload file `pelanggan_status.xlsx`
+5. Pilih sheet/tab yang berisi data
+6. Klik `Save`
+7. Setelah tersimpan, klik kanan pada data source → `Create Base View`
+8. Pilih sheet dan klik `Create`
+
+---
+
+### C. Buat Base View dari MySQL
+
+1. Klik kanan pada koneksi MySQL yang sudah dibuat sebelumnya
+2. Pilih `Create Base View`
+3. Pilih tabel `customers`
+4. Klik `Create`
+
+Sekarang kamu memiliki dua Base View:
+- `customers` dari MySQL
+- `pelanggan_status` dari Excel
 
 ### 2. Buat Join View
 1. Klik menu `New` lalu pilih `Join`
