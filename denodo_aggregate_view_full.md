@@ -110,22 +110,3 @@ Misalnya beri nama: `vw_summary_transaksi_pelanggan`
 http://<host>:9090/server/admin/vw_summary_transaksi_pelanggan/?$format=json
 ```
 
----
-
-## 6. Dummy JSON untuk POST (jika view bisa insert)
-
-```json
-{
-  "customer_id": 4,
-  "name": "Dewi",
-  "email": "dewi@mail.com",
-  "gender": "Female",
-  "age": 28,
-  "city": "Yogyakarta",
-  "jumlah_transaksi": 3,
-  "total_amount": 325000
-}
-```
-
----
-
