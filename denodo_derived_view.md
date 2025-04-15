@@ -39,7 +39,7 @@ INSERT INTO transaksi (customer_id, transaction_date, amount) VALUES
 
 ## Derived View Tahap 1: `pelanggan_transaksi_view`
 
-Gabungkan `pelanggan` dan `transaksi`:
+Gabungkan `pelanggan` dan `new_transaksi`:
 
 ```sql
 SELECT 
