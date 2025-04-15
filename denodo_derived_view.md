@@ -1,5 +1,5 @@
 
-# Denodo - Pembuatan Derived View (tanpa parameter)
+# Denodo - Pembuatan Derived View
 
 ## Base Views yang Digunakan
 
