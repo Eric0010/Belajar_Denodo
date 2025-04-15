@@ -42,6 +42,7 @@ INSERT INTO transaksi (customer_id, transaction_date, amount) VALUES
 Gabungkan `pelanggan` dan `new_transaksi`:
 
 ```sql
+CREATE OR REPLACE VIEW new_transaksi AS
 SELECT 
   p.customer_id,
   p.name,
@@ -60,6 +61,7 @@ Disimpan sebagai: `pelanggan_transaksi_view`
 Menghitung total transaksi:
 
 ```sql
+CREATE OR REPLACE VIEW total_transaksi_per_pelanggan AS
 SELECT
   customer_id,
   name,
@@ -77,6 +79,7 @@ Disimpan sebagai: `total_transaksi_per_pelanggan`
 Menambahkan logika `CASE` dan `COALESCE`:
 
 ```sql
+CREATE OR REPLACE VIEW laporan_status_pelanggan AS
 SELECT
   customer_id,
   name,
